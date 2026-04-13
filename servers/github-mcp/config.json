@@ -1,0 +1,25 @@
+{
+  "id": "mcp-github",
+  "name": "GitHub MCP",
+  "version": "1.0.0",
+  "description": "Official ModelContextProtocol GitHub server. Repository operations, issue management, pull request workflows, and code search.",
+  "source": "official",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-github"],
+  "publishStatus": "published",
+  "tags": ["devops", "code", "ci-cd"],
+  "tools": [
+    { "name": "search_repositories", "description": "Search GitHub repositories", "category": "search", "accessLevel": "allowed" },
+    { "name": "get_file_contents", "description": "Read file contents from a repo", "category": "read", "accessLevel": "allowed" },
+    { "name": "create_issue", "description": "Create a GitHub issue", "category": "issues", "accessLevel": "allowed" },
+    { "name": "create_pull_request", "description": "Create a pull request", "category": "pull-requests", "accessLevel": "allowed" },
+    { "name": "list_commits", "description": "List commits on a branch", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [
+    { "name": "GITHUB_PERSONAL_ACCESS_TOKEN", "required": true, "secret": true, "description": "GitHub PAT with repo scope" }
+  ],
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-03-10", "notes": "Initial release with core GitHub operations." }
+  ]
+}

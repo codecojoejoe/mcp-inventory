@@ -1,0 +1,25 @@
+{
+  "id": "mcp-asana",
+  "name": "Asana MCP",
+  "version": "1.0.0",
+  "description": "Community @roychri/mcp-server-asana server. Task and project management operations.",
+  "source": "community",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@roychri/mcp-server-asana"],
+  "publishStatus": "published",
+  "tags": ["project-management", "tasks"],
+  "tools": [
+    { "name": "search_tasks", "description": "Search Asana tasks", "category": "search", "accessLevel": "allowed" },
+    { "name": "get_task", "description": "Get task details", "category": "read", "accessLevel": "allowed" },
+    { "name": "create_task", "description": "Create a new task", "category": "write", "accessLevel": "allowed" },
+    { "name": "update_task", "description": "Update task fields", "category": "write", "accessLevel": "allowed" },
+    { "name": "list_projects", "description": "List Asana projects", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [
+    { "name": "ASANA_ACCESS_TOKEN", "required": true, "secret": true, "description": "Asana personal access token" }
+  ],
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-04-07", "notes": "Initial Asana MCP with task and project management." }
+  ]
+}

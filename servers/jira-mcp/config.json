@@ -1,0 +1,27 @@
+{
+  "id": "mcp-jira",
+  "name": "Jira MCP",
+  "version": "1.0.0",
+  "description": "Jira project management server. Issue CRUD, sprint management, JQL search, and workflow transitions.",
+  "source": "community",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "jira-mcp"],
+  "publishStatus": "published",
+  "tags": ["project-management", "ticketing"],
+  "tools": [
+    { "name": "search_issues", "description": "Search Jira issues with JQL", "category": "search", "accessLevel": "allowed" },
+    { "name": "get_issue", "description": "Get issue details", "category": "read", "accessLevel": "allowed" },
+    { "name": "create_issue", "description": "Create a new Jira issue", "category": "write", "accessLevel": "allowed" },
+    { "name": "update_issue", "description": "Update issue fields", "category": "write", "accessLevel": "allowed" },
+    { "name": "transition_issue", "description": "Move issue through workflow", "category": "write", "accessLevel": "allowed" }
+  ],
+  "envVars": [
+    { "name": "JIRA_INSTANCE_URL", "required": true, "secret": false, "description": "Jira instance URL" },
+    { "name": "JIRA_USER_EMAIL", "required": true, "secret": false, "description": "Jira user email" },
+    { "name": "JIRA_API_KEY", "required": true, "secret": true, "description": "Jira API key" }
+  ],
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-03-20", "notes": "Initial Jira MCP with JQL search and issue management." }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-04-12T00:00:00Z",
+  "servers": [
+    {
+      "id": "mcp-okta",
+      "name": "Okta MCP",
+      "version": "2.1.0",
+      "source": "custom",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["identity", "security", "iam"],
+      "toolCount": 6,
+      "path": "servers/okta-mcp/config.json"
+    },
+    {
+      "id": "mcp-github",
+      "name": "GitHub MCP",
+      "version": "1.0.0",
+      "source": "official",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["devops", "code", "ci-cd"],
+      "toolCount": 5,
+      "path": "servers/github-mcp/config.json"
+    },
+    {
+      "id": "mcp-glean",
+      "name": "Glean MCP",
+      "version": "1.0.0",
+      "source": "custom",
+      "transport": "sse",
+      "publishStatus": "published",
+      "tags": ["search", "knowledge", "enterprise"],
+      "toolCount": 2,
+      "path": "servers/glean-mcp/config.json"
+    },
+    {
+      "id": "mcp-jira",
+      "name": "Jira MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["project-management", "ticketing"],
+      "toolCount": 5,
+      "path": "servers/jira-mcp/config.json"
+    },
+    {
+      "id": "mcp-confluence",
+      "name": "Confluence MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["documentation", "wiki", "knowledge"],
+      "toolCount": 4,
+      "path": "servers/confluence-mcp/config.json"
+    },
+    {
+      "id": "mcp-atlassian",
+      "name": "Atlassian MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["project-management", "documentation", "atlassian"],
+      "toolCount": 4,
+      "path": "servers/atlassian-mcp/config.json"
+    },
+    {
+      "id": "mcp-asana",
+      "name": "Asana MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["project-management", "tasks"],
+      "toolCount": 5,
+      "path": "servers/asana-mcp/config.json"
+    }
+  ]
+}

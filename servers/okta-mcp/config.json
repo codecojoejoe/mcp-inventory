@@ -1,0 +1,29 @@
+{
+  "id": "mcp-okta",
+  "name": "Okta MCP",
+  "version": "2.1.0",
+  "description": "Custom local Okta MCP server built on FastMCP 2.0. Handles IAM operations, security monitoring, user/group/app management, and login risk assessment.",
+  "source": "custom",
+  "transport": "stdio",
+  "command": "python",
+  "args": ["local_okta_mcp/main.py"],
+  "publishStatus": "published",
+  "tags": ["identity", "security", "iam"],
+  "tools": [
+    { "name": "list_users", "description": "List Okta users with filtering", "category": "user-management", "accessLevel": "allowed" },
+    { "name": "get_user", "description": "Get detailed user profile", "category": "user-management", "accessLevel": "allowed" },
+    { "name": "deactivate_user", "description": "Deactivate an Okta user account", "category": "user-management", "accessLevel": "requires_approval" },
+    { "name": "list_groups", "description": "List Okta groups", "category": "group-management", "accessLevel": "allowed" },
+    { "name": "list_apps", "description": "List Okta applications", "category": "app-management", "accessLevel": "allowed" },
+    { "name": "get_security_events", "description": "Query Okta System Log for security events", "category": "security", "accessLevel": "allowed" }
+  ],
+  "envVars": [
+    { "name": "OKTA_CLIENT_ORGURL", "required": true, "secret": false, "description": "Okta org URL" },
+    { "name": "OKTA_API_TOKEN", "required": true, "secret": true, "description": "Okta API token" }
+  ],
+  "changelog": [
+    { "version": "2.1.0", "date": "2026-04-05", "notes": "Added login risk assessment and concurrent session limits." },
+    { "version": "2.0.0", "date": "2026-02-25", "notes": "Migrated to FastMCP 2.0 with Streamable HTTP support." },
+    { "version": "1.0.0", "date": "2025-12-15", "notes": "Initial Okta MCP server with core IAM tools." }
+  ]
+}

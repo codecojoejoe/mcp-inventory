@@ -1,0 +1,23 @@
+{
+  "id": "mcp-glean",
+  "name": "Glean MCP",
+  "version": "1.0.0",
+  "description": "Remote Glean MCP for enterprise search and knowledge retrieval. Connects via SSE with bearer token authentication.",
+  "source": "custom",
+  "transport": "sse",
+  "remoteURL": "https://{instance}-be.glean.com/mcp/default",
+  "publishStatus": "published",
+  "tags": ["search", "knowledge", "enterprise"],
+  "tools": [
+    { "name": "search", "description": "Enterprise knowledge search across all connected sources", "category": "search", "accessLevel": "allowed" },
+    { "name": "get_document", "description": "Retrieve a specific document by ID", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [
+    { "name": "GLEAN_INSTANCE", "required": true, "secret": false, "description": "Glean instance name" },
+    { "name": "GLEAN_API_TOKEN", "required": true, "secret": true, "description": "Glean API bearer token" },
+    { "name": "GLEAN_ACT_AS_EMAIL", "required": false, "secret": false, "description": "Email to act as for search scoping" }
+  ],
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-03-28", "notes": "Initial Glean integration with SSE transport." }
+  ]
+}

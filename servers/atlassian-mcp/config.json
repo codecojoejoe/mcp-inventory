@@ -1,0 +1,29 @@
+{
+  "id": "mcp-atlassian",
+  "name": "Atlassian MCP",
+  "version": "1.0.0",
+  "description": "Community sooperset/mcp-atlassian server covering both Jira and Confluence in a single unified server.",
+  "source": "community",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-atlassian"],
+  "publishStatus": "published",
+  "tags": ["project-management", "documentation", "atlassian"],
+  "tools": [
+    { "name": "jira_search", "description": "Search Jira via unified interface", "category": "search", "accessLevel": "allowed" },
+    { "name": "confluence_search", "description": "Search Confluence via unified interface", "category": "search", "accessLevel": "allowed" },
+    { "name": "jira_get_issue", "description": "Get Jira issue details", "category": "read", "accessLevel": "allowed" },
+    { "name": "confluence_get_page", "description": "Get Confluence page content", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [
+    { "name": "JIRA_URL", "required": true, "secret": false, "description": "Jira base URL" },
+    { "name": "JIRA_USERNAME", "required": true, "secret": false, "description": "Jira username" },
+    { "name": "JIRA_API_TOKEN", "required": true, "secret": true, "description": "Jira API token" },
+    { "name": "CONFLUENCE_URL", "required": true, "secret": false, "description": "Confluence base URL" },
+    { "name": "CONFLUENCE_USERNAME", "required": true, "secret": false, "description": "Confluence username" },
+    { "name": "CONFLUENCE_API_TOKEN", "required": true, "secret": true, "description": "Confluence API token" }
+  ],
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-04-01", "notes": "Initial unified Atlassian MCP with Jira + Confluence support." }
+  ]
+}
