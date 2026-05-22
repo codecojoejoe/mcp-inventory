@@ -1,0 +1,24 @@
+{
+  "id": "mcp-google-drive",
+  "name": "Google Drive MCP",
+  "version": "1.0.0",
+  "description": "Google Drive integration for storing and retrieving resumes, cover letter templates, and evaluation reports. Keeps tailored CV versions organised per application.",
+  "source": "community",
+  "transport": "stdio",
+  "publishStatus": "published",
+  "tags": ["storage", "documents", "resume", "career"],
+  "tools": [
+    { "name": "search_files", "description": "Search Drive for resume or cover letter files", "category": "search", "accessLevel": "allowed" },
+    { "name": "read_file_content", "description": "Read resume or template content", "category": "read", "accessLevel": "allowed" },
+    { "name": "create_file", "description": "Save a new tailored resume or cover letter", "category": "write", "accessLevel": "allowed" },
+    { "name": "copy_file", "description": "Copy resume template to create a job-specific version", "category": "write", "accessLevel": "allowed" },
+    { "name": "download_file_content", "description": "Download a file for local use", "category": "read", "accessLevel": "allowed" },
+    { "name": "get_file_metadata", "description": "Check file metadata (name, modified date, size)", "category": "read", "accessLevel": "allowed" },
+    { "name": "list_recent_files", "description": "List recently accessed resume or report files", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [],
+  "notes": "Authenticated via Google OAuth. Convention: store resumes as 'Resume - [Company] - [Role] - [Date].md' in a /career-ops folder on Drive.",
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-05-22", "notes": "Initial Google Drive MCP for resume and document management." }
+  ]
+}

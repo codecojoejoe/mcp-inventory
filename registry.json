@@ -1,7 +1,62 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-04-12T00:00:00Z",
+  "updated_at": "2026-05-22T00:00:00Z",
   "servers": [
+    {
+      "id": "mcp-indeed",
+      "name": "Indeed Job Search MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["jobs", "career", "recruiting", "search"],
+      "toolCount": 4,
+      "path": "servers/indeed-mcp/config.json"
+    },
+    {
+      "id": "mcp-linkedin-jobs",
+      "name": "LinkedIn Jobs MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["jobs", "career", "linkedin", "search"],
+      "toolCount": 1,
+      "path": "servers/linkedin-jobs-mcp/config.json"
+    },
+    {
+      "id": "mcp-gmail",
+      "name": "Gmail MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["email", "communication", "career", "outreach"],
+      "toolCount": 7,
+      "path": "servers/gmail-mcp/config.json"
+    },
+    {
+      "id": "mcp-google-calendar",
+      "name": "Google Calendar MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["calendar", "scheduling", "interviews", "career"],
+      "toolCount": 6,
+      "path": "servers/google-calendar-mcp/config.json"
+    },
+    {
+      "id": "mcp-google-drive",
+      "name": "Google Drive MCP",
+      "version": "1.0.0",
+      "source": "community",
+      "transport": "stdio",
+      "publishStatus": "published",
+      "tags": ["storage", "documents", "resume", "career"],
+      "toolCount": 7,
+      "path": "servers/google-drive-mcp/config.json"
+    },
     {
       "id": "mcp-okta",
       "name": "Okta MCP",

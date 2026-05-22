@@ -1,0 +1,21 @@
+{
+  "id": "mcp-indeed",
+  "name": "Indeed Job Search MCP",
+  "version": "1.0.0",
+  "description": "Indeed-powered job search via MCP. Search listings, fetch job details, retrieve company intelligence (ratings, salaries, culture), and load resume context before searching.",
+  "source": "community",
+  "transport": "stdio",
+  "publishStatus": "published",
+  "tags": ["jobs", "career", "recruiting", "search"],
+  "tools": [
+    { "name": "search_jobs", "description": "Search Indeed job listings by keyword, location, and type", "category": "search", "accessLevel": "allowed" },
+    { "name": "get_job_details", "description": "Fetch full job description and apply link by job ID", "category": "read", "accessLevel": "allowed" },
+    { "name": "get_company_data", "description": "Retrieve company ratings, salaries, and culture data", "category": "read", "accessLevel": "allowed" },
+    { "name": "get_resume", "description": "Load user resume context before searching or applying", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [],
+  "notes": "No API key required — provided via the Indeed MCP integration. Always call get_resume before search_jobs for personalized results.",
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-05-22", "notes": "Initial Indeed MCP entry for career-ops pipeline." }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "mcp-linkedin-jobs",
+  "name": "LinkedIn Jobs MCP",
+  "version": "1.0.0",
+  "description": "LinkedIn-powered job search with rich filtering: workplace type (Remote/Hybrid/On-Site), employment type, sponsorship, easy-apply, and recency filters. Complements Indeed for broader discovery.",
+  "source": "community",
+  "transport": "stdio",
+  "publishStatus": "published",
+  "tags": ["jobs", "career", "linkedin", "search"],
+  "tools": [
+    { "name": "search_jobs", "description": "Search LinkedIn job listings with workplace, employment, and recency filters", "category": "search", "accessLevel": "allowed" }
+  ],
+  "envVars": [],
+  "notes": "No API key required. Supports workplace_types: Remote, Hybrid, On-Site. Supports posted_date: ONE, THREE, SEVEN (days). Use alongside Indeed MCP for maximum coverage.",
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-05-22", "notes": "Initial LinkedIn Jobs MCP entry for career-ops pipeline." }
+  ]
+}
