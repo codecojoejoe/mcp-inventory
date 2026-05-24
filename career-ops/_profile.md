@@ -1,83 +1,139 @@
-# Candidate Profile
+# Candidate Profile — Joe
 
-> Fill in this file before running any scans or evaluations.
-> Claude reads this on every operation.
+**Email:** goesef@gmail.com
 
 ---
 
 ## Target Roles
 
-List the job titles you're actively targeting (most specific first):
+**Primary:**
+- Staff Systems Engineer (IAM / Corporate Engineering)
+- Principal Systems Engineer (IAM / Corporate Engineering)
+- Staff IAM Engineer
+- Manager, IAM Systems Engineering
 
-- [e.g. Senior Software Engineer]
-- [e.g. Staff Engineer]
-- [e.g. Engineering Manager]
+**Acceptable (firm on scope and comp, flexible on title):**
+- Staff IT Engineer
+- Staff Corporate Engineer
+- Senior Staff Systems Engineer
+- Principal IT Systems Engineer
+- Staff Security Engineer (IAM-focused)
 
-## Seniority
+**Hard exclusions:**
+- Product engineering roles (customer-facing IAM feature development)
+- Contract or staffing agency positions
+- Onsite or hybrid roles
+- Senior-level roles unless comp and scope match Staff expectations
 
-[e.g. Senior / Staff / Principal / Manager]
+---
 
-## Locations
+## Title Keywords (positive — scan filter)
 
-- [City, State] (preferred)
-- Remote (yes/no/open to hybrid)
-- [Any locations to exclude]
+`staff`, `principal`, `senior staff`, `IAM`, `identity`, `corporate engineering`, `systems engineer`, `IT engineer`
 
-## Country
+## Title Keywords (negative — exclude)
 
-[e.g. US]
+`intern`, `junior`, `associate`, `contract`, `product engineer`, `software engineer`, `developer`
+
+---
+
+## Location
+
+Remote only. No hybrid. No onsite. No "remote with quarterly travel" unless travel is explicitly optional.
+
+**Country:** US
+
+---
 
 ## Compensation
 
-- **Target base:** $[XXX,XXX]
-- **Minimum acceptable:** $[XXX,XXX]
-- **Equity:** [Important / Nice to have / Not a factor]
-- **Total comp target:** $[XXX,XXX]
+- **Base floor:** $185,000 (non-negotiable)
+- **Total comp:** Negotiable depending on equity structure and stage
+- **Benefits:** Unlimited PTO preferred
+
+---
 
 ## Target Companies
 
-Companies you're particularly interested in (Claude will prioritise these in scans):
+**Preferred:**
+- AI companies and frontier AI labs (Anthropic, OpenAI, ElevenLabs, etc.)
+- High-growth startups with strong engineering culture
+- Established tech companies with meaningful IAM programs
 
-- [Company A]
-- [Company B]
-- [Company C]
+**Acceptable:**
+- Healthcare tech (compliance overlap)
+- Fintech (regulatory rigor)
+- Quantitative trading firms
+- Any company where Corporate IT/IAM is treated as engineering, not help desk
 
-## Industries
+**Avoid:**
+- Companies where IT reports to Finance or Facilities
+- Legacy enterprises with no automation culture
+- Orgs where IAM means "reset passwords and manage AD"
 
-- [e.g. AI / ML]
-- [e.g. Developer Tools]
-- [e.g. FinTech]
-
-## Title Keywords (positive — must include at least one)
-
-`senior`, `staff`, `principal`, `lead`, `[your domain]`
-
-## Title Keywords (negative — exclude if present)
-
-`intern`, `junior`, `associate`, `contract` (adjust as needed)
+---
 
 ## North Star Archetypes
 
-Describe 2–3 role archetypes that represent your ideal next step:
+### 1. The Builder
+First or second IAM hire at a company that treats identity infrastructure as a real engineering problem. High autonomy. Greenfield or near-greenfield. The person who builds the function.
 
-1. **[Archetype 1]:** [e.g. "IC-heavy staff eng role at a product-led AI company, working on infra or platform"]
-2. **[Archetype 2]:** [e.g. "EM role leading a team of 5–8, first engineering manager role"]
-3. **[Archetype 3]:** [e.g. "...]
+**Signal companies:** Ashby (Staff IT Engineer, hire #2 for IT) — this is the exact pattern.
 
-## Hard Requirements (dealbreakers if missing)
+### 2. The Modernizer
+Existing IAM program that needs a technical leader to automate, scale, and professionalize. Team may exist but lacks engineering depth to move from manual to programmatic. Staff-level IC with strong influence.
 
-- [e.g. Fully remote OR hybrid with < 2 days/week onsite]
-- [e.g. Visa sponsorship not required]
-- [e.g. No on-call rotations]
+**Signal:** Included Health trajectory — inherited largely manual IAM, built the automation layer.
 
-## Nice to Haves
+### 3. The AI-Native IAM Leader
+Company building at the intersection of AI and identity. MCP infrastructure, AI agent governance, non-human identity management, AI-driven security operations.
 
-- [e.g. Startup equity upside]
-- [e.g. Engineering-led culture]
+**Signal:** Reddit (AI Enablement and Productivity Engineering). The NHIMO platform is a working implementation — policy engine, guardrails, audit logging, 175+ MCP tools.
+
+---
+
+## Differentiators (ranked by impact)
+
+1. **AiR/NHIMO platform** — Production macOS app. 175+ MCP tools. Policy engine, guardrail engine, full audit system. Nothing else in this candidate pool like it.
+2. **Four Okta certifications** — Administrator, Professional, Developer, AI Agents.
+3. **Tines Certified Automation Architect** + 3 additional Tines credentials. 60+ production workflows.
+4. **Zero-touch onboarding pipeline** — Workday → Okta → JAMF. 1 day reduced to 20 minutes. In production.
+5. **Scale credibility** — 7,000 identities, 300+ SaaS integrations, two Okta tenants.
+6. **People management** — Managed 4 IAM engineers. Can step into manager roles.
+7. **M&A identity architecture** — Rally Health / Optum merger. Real migration and consolidation.
+8. **Compliance fluency** — HIPAA, HITRUST, SOC 2. Operated under audit continuously.
+
+---
+
+## Job Sourcing
+
+**Primary sources (ATS-direct):** Greenhouse, Lever, Ashby
+**Secondary:** LinkedIn job posts, direct company career pages
+**Exclude:** Indeed, Dice, Lensa, and all aggregators
+
+**Application volume:** Minimum 5 net-new roles per search request. No duplicates. Dead listings filtered before surfacing.
+
+---
+
+## Active Pipeline (as of 2026-05-24)
+
+| Company | Role | Status |
+|---------|------|--------|
+| Ashby | Staff IT Engineer | Technical rounds complete |
+| Reddit | Staff Systems Engineer, AI Enablement & Productivity Engineering | Active |
+| SoFi | Staff IAM Engineer | Hiring manager round pending |
+| Vanta | Senior Systems Engineer, Corporate Engineering | Strong lead |
+| Chamber Cardio | IT Systems and Security Engineer | Intro call pending response |
+| Simplifi | (role) | Virtual interview completed |
+
+---
+
+## Communication Style
+
+Direct and terse. No filler. Short declarative sentences. No em dashes. No contrastive antithesis. No AI phrase recycling. First-person framing. Resume content as plain text with newline-separated bullets. Interview prep anchored to real work and real stories only.
+
+---
 
 ## Writing Style
 
-> Claude extracts this from your CV and samples automatically.
-> Leave blank initially — it will be populated after first evaluation.
-
-[Auto-populated]
+> Auto-populated after first evaluation.
