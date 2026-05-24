@@ -63,22 +63,52 @@ Verify liveness before adding.
 
 ### Channel 5 — GEM (WebSearch)
 
+GEM format is `jobs.gem.com/[company]` — not a general index. Only scan if you know the company's GEM URL.
+
+For each known GEM company (add to `_profile.md > ## GEM Companies`):
 ```
-site:gem.com "[role]" remote
-```
-Also try:
-```
-site:boards.gem.com "[role]"
+site:jobs.gem.com/[company] "[role]"
 ```
 Verify liveness before adding.
 
-### Channel 6 — Direct Company Career Pages (targeted)
+### Channel 6 — Workday (WebSearch)
+
+Many enterprise tech, fintech, and healthtech companies run on Workday ATS. Broad coverage with:
+```
+site:myworkdayjobs.com "staff" "identity" OR "IAM" remote
+site:myworkdayjobs.com "staff systems engineer" "identity"
+site:myworkdayjobs.com "principal" "IAM" OR "identity" remote
+```
+Also targeted per company:
+```
+site:myworkdayjobs.com/[company] "[role]"
+```
+Note: Workday URLs contain dynamic job IDs. Verify each listing is live via WebFetch before adding.
+
+### Channel 7 — Direct Company Career Pages (targeted)
 
 For each company in `_profile.md > ## Target Companies`, search:
 ```
 site:[company].com/careers "[role]"
 ```
-Or use known ATS URL if available (e.g. company uses Greenhouse — use boards.greenhouse.io/[company]).
+Or use known ATS URL if available.
+
+## Google Search Pattern Reference
+
+Best-performing patterns (use verbatim in WebSearch):
+
+```
+site:jobs.lever.co "staff systems engineer" "identity"
+site:jobs.lever.co "staff" "IAM" remote
+site:boards.greenhouse.io "staff" "identity" "corporate" remote
+site:boards.greenhouse.io "staff IAM engineer" remote
+site:jobs.ashbyhq.com "staff IT engineer" remote
+site:jobs.ashbyhq.com "staff corporate engineer" "identity"
+site:myworkdayjobs.com "staff systems engineer" "identity"
+site:myworkdayjobs.com "automation engineer" "AI" remote
+```
+
+Tip: Avoid `OR` chains in a single query — split into separate searches for better index coverage.
 
 ---
 
