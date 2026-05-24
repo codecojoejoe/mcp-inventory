@@ -10,63 +10,139 @@ User says: `/scan`, "scan for jobs", "find new openings", or similar.
 
 1. Read `career-ops/cv.md` and `career-ops/_profile.md` to load search context.
 2. Read `career-ops/data/scan-history.tsv` to know what's already been seen.
-3. Read `career-ops/data/applications.md` to avoid re-adding applied roles.
+3. Read `career-ops/data/applications.md` to avoid re-adding active roles.
 
-## Search Strategy
+## Sourcing Rules
 
-Run all three levels in parallel for speed.
+**Use:** LinkedIn, Greenhouse, Lever, Ashby, GEM — ATS-direct only.
+**Never use:** Indeed, Dice, Lensa, or any aggregator.
 
-### Level 1 — Indeed (primary)
+---
 
-Call `indeed.search_jobs` with:
-- `search`: each target role from `_profile.md > ## Target Roles`
-- `location`: each preferred location from `_profile.md > ## Locations`
-- `country_code`: from profile
-- `job_type`: "fulltime" unless profile says otherwise
+## Search Channels
 
-### Level 2 — LinkedIn (complementary)
+Run all channels in parallel.
 
-Call `linkedin_jobs.search_jobs` with:
-- `keyword`: same role titles
-- `location`: same locations
-- `workplace_types`: per profile preference (e.g. `["Remote", "Hybrid"]`)
-- `posted_date`: "SEVEN" to catch the last 7 days
-- `employment_types`: `["FULL_TIME"]`
+### Channel 1 — LinkedIn (MCP)
 
-### Level 3 — Targeted company search
+Call `linkedin_jobs.search_jobs` for each target role:
+- `keyword`: each title from `_profile.md > ## Target Roles` (Primary first)
+- `location`: "remote" or "United States"
+- `workplace_types`: ["Remote"]
+- `employment_types`: ["FULL_TIME"]
+- `posted_date`: "SEVEN"
 
-For each company in `_profile.md > ## Target Companies`, run:
-- `indeed.search_jobs` with `search: "[role] at [company]"`
-- `indeed.get_company_data` if not yet profiled
+Also run a second pass excluding Senior-only results by appending "staff OR principal" to keyword.
 
-## Filtering
+### Channel 2 — Greenhouse (WebSearch)
 
-**Include** if job title matches any positive keyword in `_profile.md > ## Title Keywords`.
-**Exclude** if title matches any negative keyword (e.g. "intern", "junior" if seniority is senior).
-**Exclude** if job ID / URL already appears in `scan-history.tsv` or `applications.md`.
+For each target role title, run:
+```
+site:boards.greenhouse.io "[role]" remote
+```
+Fallback:
+```
+site:boards.greenhouse.io "[role]"
+```
+Verify each result is live (non-redirect, apply button present) before adding.
+
+### Channel 3 — Lever (WebSearch)
+
+```
+site:jobs.lever.co "[role]" remote
+```
+Lever URLs follow pattern: `jobs.lever.co/[company]/[job-id]`
+Verify liveness before adding.
+
+### Channel 4 — Ashby (WebSearch)
+
+```
+site:jobs.ashbyhq.com "[role]" remote
+```
+Verify liveness before adding.
+
+### Channel 5 — GEM (WebSearch)
+
+```
+site:gem.com "[role]" remote
+```
+Also try:
+```
+site:boards.gem.com "[role]"
+```
+Verify liveness before adding.
+
+### Channel 6 — Direct Company Career Pages (targeted)
+
+For each company in `_profile.md > ## Target Companies`, search:
+```
+site:[company].com/careers "[role]"
+```
+Or use known ATS URL if available (e.g. company uses Greenhouse — use boards.greenhouse.io/[company]).
+
+---
+
+## Filtering Rules
+
+**Include** if:
+- Title contains a positive keyword from `_profile.md > ## Title Keywords (positive)`
+- Role is explicitly remote or location-flexible
+- Seniority matches (Staff, Principal, Senior Staff, or Manager)
+- Company passes the profile's company quality bar
+
+**Exclude** if:
+- Title matches a negative keyword (intern, junior, associate, contract, product engineer, software engineer)
+- Role is onsite or hybrid with mandatory office days
+- Job ID / URL already in `scan-history.tsv` or `applications.md`
+- Listing is dead (broken URL, no apply button, redirects to homepage)
+- Contract or staffing agency posting
+
+**Minimum per scan:** 5 net-new qualifying roles. Keep scanning until threshold is met.
+
+---
 
 ## Output
 
-For each new qualifying job, append to `career-ops/data/pipeline.md`:
+For each qualifying new job, append to `career-ops/data/pipeline.md`:
 
 ```
-- [ ] [Company] | [Title] | [Location] | [Source: Indeed/LinkedIn] | [Job ID or URL] | [Salary if shown]
+- [ ] [Company] | [Title] | [Location/Remote] | [Source: LinkedIn/Greenhouse/Lever/Ashby/GEM/Direct] | [URL] | [Salary if shown]
 ```
 
-Then append to `scan-history.tsv`:
+Append to `career-ops/data/scan-history.tsv`:
 ```
-[ISO date]\t[job_id]\t[company]\t[title]\t[source]\tadded
+[ISO date]\t[url_or_id]\t[company]\t[title]\t[source]\tadded
 ```
 
-Finish with a summary table:
+For filtered/dead listings, still log them as `filtered` or `dead` in scan-history to prevent re-checking.
 
-| Source | Found | Filtered | Duplicates | Added to pipeline |
-|--------|-------|----------|------------|-------------------|
-| Indeed | N     | N        | N          | N                 |
-| LinkedIn | N   | N        | N          | N                 |
+---
+
+## Summary Table
+
+```
+SCAN RESULTS — [Date]
+──────────────────────────────────────────────────────────
+ Channel     Found   Filtered   Dead   Duplicate   Added
+──────────────────────────────────────────────────────────
+ LinkedIn      N        N        N        N          N
+ Greenhouse    N        N        N        N          N
+ Lever         N        N        N        N          N
+ Ashby         N        N        N        N          N
+ GEM           N        N        N        N          N
+ Direct        N        N        N        N          N
+──────────────────────────────────────────────────────────
+ Total         N        N        N        N          N
+```
+
+If fewer than 5 net-new roles were added, say so and explain why (thin market, all filtered, etc.).
+
+---
 
 ## Rules
 
+- Never use Indeed or any aggregator.
+- Never add a listing without verifying it's live.
+- Never add a role already in the active pipeline or applications tracker.
 - Never modify `cv.md` or `_profile.md`.
-- Never add jobs with score < 3.0 from a quick title-only filter.
-- If `_profile.md` is empty, ask the user to fill it before scanning.
+- Minimum 5 net-new roles per scan run.
