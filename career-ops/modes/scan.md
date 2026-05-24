@@ -85,6 +85,29 @@ site:myworkdayjobs.com/[company] "[role]"
 ```
 Note: Workday URLs contain dynamic job IDs. Verify each listing is live via WebFetch before adding.
 
+### Channel 8 — Wellfound / AngelList (WebSearch)
+
+Strong for AI startups and early-stage companies. Two approaches:
+
+**Broad search** (individual job postings have URLs at `wellfound.com/jobs/[id]-[slug]`):
+```
+site:wellfound.com/jobs "identity" OR "IAM" "staff" remote
+site:wellfound.com/jobs "IT engineer" OR "systems engineer" "staff" remote Okta
+```
+Note: Wellfound's public index is shallow — many listings don't surface. Company pages are more reliable.
+
+**Targeted company pages** (check each target company from `_profile.md > ## Target Companies`):
+```
+wellfound.com/company/[company-slug]/jobs
+```
+Examples:
+- `wellfound.com/company/anthropic/jobs`
+- `wellfound.com/company/openai/jobs`
+- `wellfound.com/company/elevenlabs/jobs`
+
+WebFetch is blocked on Wellfound (requires login). Use WebSearch only.
+
+
 ### Channel 7 — Direct Company Career Pages (targeted)
 
 For each company in `_profile.md > ## Target Companies`, search:
