@@ -6,34 +6,36 @@
 
 ## Target Roles
 
-**Primary:**
-- Staff Systems Engineer (IAM / Corporate Engineering)
-- Principal Systems Engineer (IAM / Corporate Engineering)
-- Staff IAM Engineer
-- Manager, IAM Systems Engineering
+**Any of these — title is flexible, scope and comp are not:**
+- Staff / Senior / Principal Systems Engineer (Corporate IT / IAM)
+- Staff / Senior / Principal IAM Engineer
+- Staff / Senior IT Engineer
+- Identity and Access Manager / IAM Manager
+- Manager, IT Systems Engineering
+- Staff / Senior Corporate Engineer
+- Staff / Senior Security Engineer (IAM-focused, corporate IT)
 
-**Acceptable (firm on scope and comp, flexible on title):**
-- Staff IT Engineer
-- Staff Corporate Engineer
-- Senior Staff Systems Engineer
-- Principal IT Systems Engineer
-- Staff Security Engineer (IAM-focused)
+Title level (Staff vs Senior vs Principal) does not matter. What matters:
+- The role is under Corporate IT / IT Engineering (not product engineering)
+- It touches IAM, identity, SaaS governance, or automation
+- Remote is available
+- Comp meets floor
 
 **Hard exclusions:**
-- Product engineering roles (customer-facing IAM feature development)
+- Product engineering roles (building IAM features for customers)
 - Contract or staffing agency positions
-- Onsite or hybrid roles
-- Senior-level roles unless comp and scope match Staff expectations
+- Onsite or hybrid (no exceptions)
+- Roles where IT reports to Finance or Facilities
 
 ---
 
 ## Title Keywords (positive — scan filter)
 
-`staff`, `principal`, `senior staff`, `IAM`, `identity`, `corporate engineering`, `systems engineer`, `IT engineer`
+`IAM`, `identity`, `IT engineer`, `IT systems`, `systems engineer`, `corporate engineer`, `corporate IT`, `identity engineer`, `access management`
 
 ## Title Keywords (negative — exclude)
 
-`intern`, `junior`, `associate`, `contract`, `product engineer`, `software engineer`, `developer`
+`intern`, `junior`, `associate`, `contract`, `staffing`, `product engineer`, `software engineer`, `developer`, `analyst` (unless IAM Analyst at Staff/Senior scope)
 
 ---
 

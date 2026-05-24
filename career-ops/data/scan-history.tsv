@@ -14,3 +14,32 @@ date	job_id	company	title	source	status
 2026-05-24	ionq/jobs/5837709004	IonQ	Staff Software Engineer IAM Cloud Platform	Greenhouse	filtered-product-eng
 2026-05-24	simspace/58c83b74	SimSpace	Staff Software Engineer IAM	Ashby	filtered-product-eng
 2026-05-24	d953803a	Qcells	Staff Software Engineer IAM	LinkedIn-via-Dice	filtered-aggregator
+2026-05-24	lime/d5c5d3bb-d6e5-4d1e-8e52-fa40df3c38a7	Lime	Staff Identity & Access Management Engineer	Ashby	added
+2026-05-24	lime/4da061e0-c675-4c79-be52-131b5e83f11e	Lime	Senior Identity & Access Management Engineer	Ashby	added
+2026-05-24	calendly/jobs/8167621002	Calendly	Senior IAM Engineer	Greenhouse	added
+2026-05-24	crowdstrikecareers/job/R22806	CrowdStrike	Principal IAM Architect — Enterprise Identity Transformation	Workday	added
+2026-05-24	hopper/ee099c84-f217-4819-bee6-ee20c79a5234	Hopper	IT Operations Automation Engineer	Ashby	added
+2026-05-24	conductorone/8bf5a01e-eeb7-4838-8951-deef5feee1ea	ConductorOne	Senior IT Systems Engineer	Ashby	added
+2026-05-24	aledade/bbb512d7-3729-4e4a-a3f2-97f234c4b252	Aledade	Senior Security Engineer II (IAM)	Lever	added
+2026-05-24	outreach/9866db36-f050-484a-a553-ccb381c50ffe	Outreach	Senior Staff Security Engineer, Corporate Security	Lever	added
+2026-05-24	openai/6c6c1ace-12d6-48f0-88f0-488ff8521571	OpenAI	IT Solutions Engineer	Ashby	added
+2026-05-24	benepass/4c988742-00bd-4a0f-8663-1c79dd0e3822	Benepass	Senior IT Systems Engineer	Ashby	added
+2026-05-24	gitlab/jobs/7259384002	GitLab	Sr. IT Systems Engineer	Greenhouse	added
+2026-05-24	goatgroup/jobs/4654902005	GOAT Group	Senior IT Systems Engineer	Greenhouse	added
+2026-05-24	xai/jobs/4588788007	xAI	Identity Access Management Engineer	Greenhouse	added
+2026-05-24	serverobotics/dbe9b362-2795-4d04-aa53-9627b93b82e8	Serve Robotics	IT IAM Engineer	Ashby	added
+2026-05-24	atlan/756ae46b-029a-4c96-8345-9252091b6ccc	Atlan	Senior Systems Engineer, IT	Ashby	added
+2026-05-24	whoop/829738c1-ad3d-4950-9d51-41b36b6f87b6	WHOOP	Senior IT Systems Engineer	Lever	filtered-onsite-Boston
+2026-05-24	zoox/1955e57c-73a8-4b02-841d-c6016c561235	Zoox	Senior/Staff IAM Engineer	Lever	filtered-onsite-FosterCity
+2026-05-24	crowdstrikecareers/job/R25094	CrowdStrike	IAM Engineer (Remote)	Workday	filtered-below-floor
+2026-05-24	pluralsight/job/R0013449	Pluralsight	IAM Engineer	Workday	filtered-below-floor
+2026-05-24	chime/jobs/8389281002	Chime	Senior IAM Engineer	Greenhouse	filtered-below-floor
+2026-05-24	ionq/jobs/5837709004	IonQ	Senior IAM Engineer (Okta)	Greenhouse	filtered-product-eng
+2026-05-24	airwallex/899687e6-5a7a-4f60-8b12-c8dada1edab9	Airwallex	Senior IT Engineer, Okta	Ashby	filtered-location-Singapore
+2026-05-24	lambda/f0e28f05-9dd4-4b0d-8c35-bdf17a928503	Lambda	Senior Software Engineer - IAM	Ashby	filtered-product-eng
+2026-05-24	zip/77f018e3-af9a-4b4e-b5bd-d08820b7dc4f	Zip	Software Engineer IAM	Ashby	filtered-product-eng
+2026-05-24	docker/de693013-412d-4590-8c2a-3bb3719acd3d	Docker	Senior Software Engineer IAM	Ashby	filtered-product-eng
+2026-05-24	everops/16bdc32a-a95b-412e-983f-32980ae9f403	EverOps	Senior IT Identity Engineer	Ashby	filtered-managed-services
+2026-05-24	sonyinteractiveentertainmentglobal/jobs/4747358004	PlayStation Global	Senior IAM Engineer	Greenhouse	filtered-onsite-SanDiego
+2026-05-24	intercom/jobs/6361515	Intercom	Engineering Manager, IT Engineering	Greenhouse	filtered-location-London
+2026-05-24	dailypay/660212dc-7920-4a67-91e9-6563300f511f	DailyPay	IAM Engineer	Ashby	filtered-below-floor
