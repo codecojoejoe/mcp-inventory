@@ -1,0 +1,23 @@
+{
+  "id": "mcp-google-calendar",
+  "name": "Google Calendar MCP",
+  "version": "1.0.0",
+  "description": "Google Calendar integration for scheduling interviews, setting follow-up reminders, and tracking availability. Automatically suggests open slots and creates events with prep notes.",
+  "source": "community",
+  "transport": "stdio",
+  "publishStatus": "published",
+  "tags": ["calendar", "scheduling", "interviews", "career"],
+  "tools": [
+    { "name": "list_events", "description": "List upcoming calendar events to check availability", "category": "read", "accessLevel": "allowed" },
+    { "name": "create_event", "description": "Create interview or follow-up reminder events", "category": "write", "accessLevel": "allowed" },
+    { "name": "update_event", "description": "Update interview details or reschedule", "category": "write", "accessLevel": "allowed" },
+    { "name": "delete_event", "description": "Remove cancelled interview events", "category": "write", "accessLevel": "allowed" },
+    { "name": "suggest_time", "description": "Suggest available meeting slots to share with recruiters", "category": "read", "accessLevel": "allowed" },
+    { "name": "get_event", "description": "Get details of a specific event", "category": "read", "accessLevel": "allowed" }
+  ],
+  "envVars": [],
+  "notes": "Authenticated via Google OAuth. Use suggest_time to propose slots; create_event to log confirmed interviews with prep notes in description.",
+  "changelog": [
+    { "version": "1.0.0", "date": "2026-05-22", "notes": "Initial Google Calendar MCP for interview scheduling." }
+  ]
+}
