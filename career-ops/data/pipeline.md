@@ -6,18 +6,18 @@ Add jobs here for evaluation. Claude processes these with `/pipeline`.
 
 ```
 - [ ] [Company] | [Title] | [Location] | [Source] | [URL] | [Salary if known]
-- [x] #001 | Acme Corp | Staff Engineer | Remote | Greenhouse | 4.2/5
+- [x] #001 | Company | Title | Score | Band
 ```
 
 ## Pending
 
-- [ ] Reddit | Staff Corporate Identity Engineer | Remote — US | Greenhouse | https://boards.greenhouse.io/reddit/jobs/4586921 | No salary listed
-- [ ] Recursion Pharmaceuticals | Staff Engineer, IAM | Remote (some on-site expected — flag) | Greenhouse | https://job-boards.greenhouse.io/recursionpharmaceuticals/jobs/7754688 | $180,600–$212,900 + bonus + equity
-- [ ] Marqeta | Manager, Identity Security | Remote (Flex First) | Greenhouse | https://job-boards.greenhouse.io/marqeta/jobs/7430302 | $167,100–$244,400
-- [ ] xAI | Senior IT Systems Engineer | Palo Alto / SF / Seattle (remote unclear — flag) | Greenhouse | https://job-boards.greenhouse.io/xai/jobs/5071895007 | No salary listed
-- [ ] Omada Health | IT Staff Systems Engineer | Remote — US | Greenhouse | https://job-boards.greenhouse.io/omadahealth/jobs/7416955 | No salary (posted Dec 2025 — verify live)
-- [ ] Chainguard | IT Engineer | Remote — US | Greenhouse | https://job-boards.greenhouse.io/chainguard/jobs/4603888006 | No salary (verify seniority level)
+<!-- Empty — run /scan to find new roles -->
 
 ## Processed
 
-<!-- Completed evaluations appear here automatically. -->
+- [x] #001 | Reddit | Staff Corporate Identity Engineer | 3.5/5 | Apply if motivated | [reports/001-Reddit-Staff-Corporate-Identity-Engineer.md](reports/001-Reddit-Staff-Corporate-Identity-Engineer.md)
+- [x] #002 | Recursion Pharmaceuticals | Staff Engineer, IAM | 2.7/5 | Against — on-site requirement + PAM gap + base below floor
+- [x] #003 | Marqeta | Manager, Identity Security | 3.1/5 | Against — 15yr requirement hard screen
+- [x] #004 | xAI | Senior IT Systems Engineer | 3.7/5 | Apply if motivated (verify remote first) | [reports/004-xAI-Senior-IT-Systems-Engineer.md](reports/004-xAI-Senior-IT-Systems-Engineer.md)
+- [x] #005 | Omada Health | IT Staff Systems Engineer | 3.2/5 | Against — likely stale + comp below floor
+- [x] #006 | Chainguard | IT Engineer | 2.6/5 | Against — title/comp below target
