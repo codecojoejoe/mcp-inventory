@@ -29,7 +29,7 @@ Call `linkedin_jobs.search_jobs` for each target role:
 - `keyword`: each title from `_profile.md > ## Target Roles` (Primary first)
 - `location`: "remote" or "United States"
 - `workplace_types`: ["Remote"]
-- `employment_types`: ["FULL_TIME"]
+- `employment_types`: ["FULLTIME"]
 - `posted_date`: "SEVEN"
 
 Also run a second pass excluding Senior-only results by appending "staff OR principal" to keyword.
