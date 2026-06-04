@@ -60,12 +60,12 @@
     {
       "id": "mcp-okta",
       "name": "Okta MCP",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "source": "custom",
       "transport": "stdio",
       "publishStatus": "published",
       "tags": ["identity", "security", "iam"],
-      "toolCount": 6,
+      "toolCount": 36,
       "path": "servers/okta-mcp/config.json"
     },
     {
